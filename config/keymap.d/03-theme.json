@@ -1,0 +1,8 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-alt-t": "theme_selector::Toggle"
+    }
+  }
+]
