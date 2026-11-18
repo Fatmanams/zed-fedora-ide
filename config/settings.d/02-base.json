@@ -1,0 +1,39 @@
+{
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_features": {
+    "calt": true
+  },
+  "terminal": {
+    "font_family": "JetBrainsMono Nerd Font",
+    "dock": "bottom"
+  },
+  "base_keymap": "VSCode",
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "agent": {
+    "dock": "right"
+  },
+  "tabs": {
+    "file_icons": true,
+    "git_status": true
+  },
+  "minimap": {
+    "show": "always"
+  },
+  "indent_guides": {
+    "enabled": true
+  },
+  "toolbar": {
+    "breadcrumbs": true
+  },
+  "inlay_hints": {
+    "enabled": true
+  },
+  "format_on_save": "on",
+  "remove_trailing_whitespace_on_save": true,
+  "ensure_final_newline_on_save": true
+}
