@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+# shellcheck shell=bash
+#
+# Phase template. Copy to phases/NN-name.sh, then replace the example checks
+# with verified work for your phase.
+#
+# Rules for phase files:
+#   - Define phase_describe and phase_run. Do not run work at source time.
+#   - Use only the helpers from lib/common.sh for prompts, installs, backups and
+#     config writes. Do not call sudo, dnf, cp or write ~/.config/zed directly.
+#   - Return non-zero only for a real failure. Declined steps return success.
+#   - Record PASS, FAIL or SKIP with record_result so verify.sh can report it.
+
+phase_describe() {
+  printf '%s\n' "Template phase: install jq and check for git (example work, verify before shipping)"
+}
+
+phase_run() {
+  local phase_id="${ZF_PHASE_ID:-00-template}"
+  local detail
+
+  log_step "Running template phase ${phase_id}"
+
+  # Example dnf step. jq is a real Fedora package (verified with dnf info jq).
+  step_dnf "Install jq for the template example" jq
+  if rpm_installed jq; then
+    detail="$(rpm -q jq 2>/dev/null || true)"
+    record_result "${phase_id}" "jq-installed" PASS "${detail}"
+  else
+    record_result "${phase_id}" "jq-installed" SKIP "jq is not installed; the dnf step was skipped or declined"
+  fi
+
+  # Example command step. The action only runs when the check fails.
+  step_cmd "Check the git CLI is available" "have_cmd git" phase_template_show_git
+  if have_cmd git; then
+    detail="$(git --version 2>/dev/null | head -n 1)"
+    record_result "${phase_id}" "git-available" PASS "${detail}"
+  else
+    record_result "${phase_id}" "git-available" SKIP "git is not installed"
+  fi
+
+  if have_cmd python3; then
+    detail="$(python3 --version 2>&1)"
+    record_result "${phase_id}" "python3-available" PASS "${detail}"
+  else
+    record_result "${phase_id}" "python3-available" FAIL "python3 is required by lib/zed_config.py"
+  fi
+
+  log_info "Template phase finished."
+}
+
+phase_template_show_git() {
+  log_warn "git is not installed; this template does not install it. Replace this example with verified work."
+}

@@ -1,0 +1,13 @@
+[
+  {
+    "bindings": {
+      "ctrl-right": "editor::SelectLargerSyntaxNode"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "o": "project_panel::Open"
+    }
+  }
+]

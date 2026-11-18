@@ -1,0 +1,12 @@
+[
+  {
+    "bindings": {
+      "ctrl-right": "editor::SelectLargerSyntaxNode"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-left": "editor::SelectSmallerSyntaxNode"
+    }
+  }
+]

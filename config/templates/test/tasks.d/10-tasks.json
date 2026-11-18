@@ -1,0 +1,11 @@
+[
+  {
+    "label": "Echo current file",
+    "command": "echo \"$ZED_FILE\""
+  },
+  {
+    "label": "List project files",
+    "command": "find",
+    "args": ["."]
+  }
+]

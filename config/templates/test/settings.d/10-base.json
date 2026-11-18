@@ -1,0 +1,11 @@
+{
+  // Base settings fragment used by the test suite.
+  "buffer_font_size": 16,
+  "ui_font_size": 14,
+  "theme": "One Dark",
+  "languages": {
+    "Python": {
+      "tab_size": 4,
+    },
+  },
+}

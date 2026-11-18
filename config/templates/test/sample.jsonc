@@ -1,0 +1,13 @@
+{
+  // JSONC parser sample. Comments and trailing commas must be accepted.
+  "theme": "One Dark",
+  "buffer_font_family": "Example \"Mono\" /* not a comment */ // still a string",
+  "buffer_font_size": 16,
+  "languages": {
+    "Python": {
+      "tab_size": 4,
+    },
+  },
+  /* A block comment
+     that spans two lines. */
+}

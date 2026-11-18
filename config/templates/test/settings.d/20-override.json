@@ -1,0 +1,12 @@
+{
+  "buffer_font_size": 17,
+  "theme": "One Light",
+  "languages": {
+    "Python": {
+      "format_on_save": "on",
+    },
+    "Rust": {
+      "tab_size": 4,
+    },
+  },
+}

@@ -1,0 +1,6 @@
+[
+  {
+    "label": "Echo current file",
+    "command": "echo \"$ZED_RELATIVE_FILE\""
+  }
+]
