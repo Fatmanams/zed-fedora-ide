@@ -1,0 +1,30 @@
+# Global git ignore patterns installed by zed-fedora-ide phase 4.
+# Common editor, operating-system, build and virtualenv noise.
+
+# Editor files
+*~
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Build output
+build/
+dist/
+out/
+target/
+*.o
+*.obj
+*.class
+*.py[cod]
+__pycache__/
+
+# Virtual environments
+.venv/
+venv/
+env/

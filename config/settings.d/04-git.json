@@ -1,0 +1,11 @@
+{
+  "git_panel": {
+    "dock": "left"
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": true
+    },
+    "git_gutter": "tracked_files"
+  }
+}

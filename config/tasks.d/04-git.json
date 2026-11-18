@@ -1,0 +1,68 @@
+[
+  {
+    "label": "Git: status",
+    "command": "git",
+    "args": ["status", "--short", "--branch"],
+    "use_new_terminal": false,
+    "reveal": "always"
+  },
+  {
+    "label": "Git: log graph (30)",
+    "command": "git",
+    "args": ["log", "--graph", "--oneline", "--decorate", "-n", "30"],
+    "use_new_terminal": false,
+    "reveal": "always"
+  },
+  {
+    "label": "Git: pull --rebase",
+    "command": "git",
+    "args": ["pull", "--rebase"],
+    "use_new_terminal": false,
+    "reveal": "always"
+  },
+  {
+    "label": "Git: push",
+    "command": "git",
+    "args": ["push"],
+    "use_new_terminal": false,
+    "reveal": "always"
+  },
+  {
+    "label": "Git: new branch",
+    "command": "bash",
+    "args": [
+      "-c",
+      "read -r -p 'New branch name: ' branch && git switch -c \"$branch\""
+    ],
+    "use_new_terminal": false,
+    "reveal": "always"
+  },
+  {
+    "label": "GitHub: create PR (web)",
+    "command": "gh",
+    "args": ["pr", "create", "--web"],
+    "use_new_terminal": false,
+    "reveal": "always"
+  },
+  {
+    "label": "GitHub: view PR (web)",
+    "command": "gh",
+    "args": ["pr", "view", "--web"],
+    "use_new_terminal": false,
+    "reveal": "always"
+  },
+  {
+    "label": "GitHub: view repository (web)",
+    "command": "gh",
+    "args": ["repo", "view", "--web"],
+    "use_new_terminal": false,
+    "reveal": "always"
+  },
+  {
+    "label": "GitHub: workflow runs",
+    "command": "gh",
+    "args": ["run", "list"],
+    "use_new_terminal": false,
+    "reveal": "always"
+  }
+]
